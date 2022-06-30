@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Material Management</title>
+  <style>
+    .fixed-nav-bar { 
+      position: fixed; top: 0; left: 0; 
+      z-index: 9999; width: 100%; height: 80px;
+       background-color: #19543E;   
+       font-size: 50px;
+       padding-left:  40px;
+       padding-top: 20px;
+      color: aliceblue;
+      }
+      *{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #f5f6fa;
+}
+
+.wrapper .sidebar{
+    background:#a3c1ad;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p{
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+}
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: #0c7db1;
+
+    background: #19543E;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: white;
+}
+
+/*.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+        color: #0c7db1;
+}
+*/
+      
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:  #19543E;
+    height: auto;
+    width: 100vw;
+
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+.frame{
+ margin-top: 80px;
+ margin-left: 225px;
+
+}
+.website{
+    color: lightskyblue;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+  </style>
+  <script>
+     var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function(){
+        document.querySelector("body").classList.toggle("active");
+    })
+  </script>
+</head>
+<body>
+  <nav class="fixed-nav-bar">
+    
+      Material Management
+     
+   </nav>
+   <div class="wrapper">
+    <!--Top menu -->
+    <div class="sidebar">
+       <!--profile image & text-->
+       <div class="profile">
+        <img src="user.jfif" alt="profile_picture">
+        <h3>N. B. Patel</h3>
+        <p>Manager</p>
+      </div>
+        <!--menu item-->
+        <ul>
+          <li>
+              <a href="h.html" class="active" target="iframe" >
+                  <span class="icon"><i class="fas fa-home"></i></span>
+                  <span class="item">Home</span>
+              </a>
+          </li>
+          <li>
+              <a href="insert.php" target="iframe">
+                  <span class="icon"><i class="fas fa-desktop"></i></span>
+                  <span class="item">Insert Material</span>
+              </a>
+          </li>
+          <li>
+              <a href="collect.php" target="iframe">
+                  <span class="icon"><i class="fas fa-user-friends"></i></span>
+                  <span class="item">Collect Material</span>
+              </a>
+          </li>
+          <li>
+              <a href="drop.php" target="iframe">
+                  <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                  <span class="item">Drop Material</span>
+              </a>
+          </li>
+          <li>
+            <a href="available material.php" target="iframe">
+                <span class="icon"><i class="fas fa-user-friends"></i></span>
+                <span class="item">Available material </span>
+            </a>
+        </li>
+          <li>
+              <a href="allmaterial.php" target="iframe" >
+                  <span class="icon"><i class="fas fa-database"></i></span>
+                  <span class="item">ALL Material </span>
+              </a>
+          </li>
+          
+        <li>
+            <a href="room.php" target="iframe" >
+                <span class="icon"><i class="fas fa-database"></i></span>
+                <span class="item">Room Material</span>
+            </a>
+        </li>
+        <li>
+            <a href="history.php" target="iframe" >
+                <span class="icon"><i class="fas fa-database"></i></span>
+                <span class="item">History </span>
+            </a>
+        </li>
+      </ul>
+  </div>
+    </div>
+    <div class="frame">    <iframe src="h.html" title="NTPC"   height="734" width="99.70%" name="iframe" >
+    </iframe>
+  </div>
+
+<div>
+  <footer>
+        <div class="footer-content">
+            <h3>NTPC</h3>
+            <p>National Thermal Power Corporation Limited</p>
+            <a href="http://www.ntpc.co.in/" class="website">http://www.ntpc.co.in/</a>
+        </div>
+        
+
+    </footer>
+</div>
+
+</body>
+</html>
